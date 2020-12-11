@@ -1,0 +1,47 @@
+ <doctype html>
+ <html>
+ <head>
+ <title>Our project</title>
+ </head>
+ <body>
+ <h1 align="center">Insulin machine</h1>
+
+ <button type='button' id="start" onclick="setInterval(tanfunction,5000)">start</button>
+ 
+ <script>
+ 	console.log(Math.round(Math.random()*5));	
+ function tanfunction(){
+
+
+ var sugarLevel = Math.round(Math.random()*5)
+ var message='';
+
+var requiredInsulin=0;
+switch(sugarLevel){
+	case 3:
+		requiredInsulin = "5mg";
+		break;
+	case 4:
+	    requiredInsulin = "6mg";
+	    break;
+	case 5:
+	   requiredInsulin = "8mg";
+	   break;    
+}
+
+ if(sugarLevel>=3){
+ 	
+ 	message="Sugar is high - level: " + sugarLevel+" injected " + requiredInsulin + " Insulin";
+ 	console.log(message);
+ 	}
+ 	else if(sugarLevel==2){
+ 	message="Sugar is normal - level: " + sugarLevel+" injected " + requiredInsulin + " Insulin";
+ 	}
+ 	else{
+ 	message="Sugar is low - level: " + sugarLevel+" injected " + requiredInsulin + " Insulin";
+ }
+
+ }
+</script>
+</body>
+</html>
